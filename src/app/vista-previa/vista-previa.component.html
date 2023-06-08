@@ -1,0 +1,144 @@
+<div #pdfContent>
+<div class="row mt-2 pt-4">
+    <div class="col-9 anti-desbordamiento">
+      <!--NOMBRE-->
+      <div class="mt-3">
+        <!--<p class="nombre-vp">{{ inputValueName }}</p>-->
+        <p class="nombre-vp">{{ curriculumHard.persona.nombre }}</p>
+      </div>
+      <!--TITULO-->
+      <div class="mt-3">
+        <!--<p class="titulo-vp general-text-vp">{{ inputValueProfession }}</p>-->
+        <p class="profesion-vp">{{ curriculumHard.persona.profesion }}</p>
+      
+      </div>
+      {{ curriculumHard.persona.descripcion }}
+      <div class="mt-4">
+        <p class="general-text-vp">
+          {{ inputValueDescription }}
+          <br />
+          <br />
+        </p>
+      </div>
+    </div>
+    <!--IMAGEN DE PERFIL-->
+    <div class="col-3">
+      <div class="">
+        <img
+          class="rounded-circle img-thumbnail img-fluid"
+          [src]="inputValueImage" *ngIf="inputValueImage"
+          alt=""
+          width="130px"
+          height="125px"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 " >
+    <!--correo-->
+    <div class="col-4 d-flex">
+      <mat-icon
+        ><span class="material-symbols-outlined"> email </span>
+        </mat-icon
+      >
+      <!--      <p class="general-text-vp">{{ inputValueEmail }}</p>
+-->
+      <p class="general-text-vp">{{ curriculumHard.persona.email }}</p>
+    </div>
+    <!--FECHA NACIMIENTO-->
+    <div class="col-4 d-flex flexContainer" >
+      <mat-icon
+        ><span class="material-symbols-outlined customIcon"> cakes </span></mat-icon
+      >
+      <!--<p class="general-text-vp ">{{ inputValueDay }}.{{ inputValueMonth }}.{{ inputValueYear }}</p>-->
+      <p class="general-text-vp ">{{ inputValueDay }}.{{ inputValueMonth }}.{{ inputValueYear }}</p>
+    </div>
+    <!--TELEFONO CONTACT-->
+    <div class="col-4 d-flex " >
+      <mat-icon>
+        <span class="material-symbols-outlined"> call </span>
+      </mat-icon>
+      <!--      <p class="general-text-vp">{{ inputValuePhone }}</p>
+-->
+      <p class="general-text-vp">{{ curriculumHard.persona.telefono }}</p>
+    </div>
+  </div>
+  <!--segunda fila iconos-->
+  <div class="row ">
+            <!--DIRECCION-->
+            <div class="col-4 d-flex align-items-center" >
+              <mat-icon>
+                <span class="material-symbols-outlined"> home </span>
+              </mat-icon>
+<!--              <p class="general-text-vp">{{ inputValueAddress }}</p>
+-->
+              <p class="general-text-vp">{{ curriculumHard.persona.direccion }}</p>
+            </div>
+
+  </div>
+  <!--Social Media-->
+  <div class="row">
+    <hr />
+    <h3 class="titulos-secciones">Social Media</h3>
+    <div class="col-4 general-text-vp">linkedin.com/in/mi</div>
+    <div class="col-8 general-text-vp">
+      http://www.linkedin.com/in/claudio-fuentes-bustos/
+    </div>
+  </div>
+  <!--Formación-->
+    <h3 class="titulos-secciones">Formación</h3>
+    <hr />
+    
+<!--<div class="row " *ngFor="let formacion of formaciones">-->
+    <div class="row " *ngFor="let formacion of curriculumHard.formaciones">
+
+    <div class="col-3 negrita">
+      <p>{{ formacion.mesInicio }}.{{ formacion.anoInicio }} - {{ formacion.mesFin }}.{{formacion.anoFin}}
+      </p>
+    </div>
+    <div class="col-9 ">
+      <p class="negrita">{{ formacion.entidadEducativa }}</p>
+      <p class="general-text-vp">{{ formacion.carrera }}</p>
+    </div>
+
+  </div>
+  <!--Experiencia-->
+    <h3 class="titulos-secciones">Experiencia</h3>
+    <hr />
+
+    <div class="row " *ngFor="let experiencia of curriculumHard.experiencias">
+
+    <div class="col-3 negrita">
+      <p>{{ experiencia.mesInicio }}.{{ experiencia.anoInicio }} - {{ experiencia.mesFin }}.{{ experiencia.anoFin }}</p>
+    </div>
+    <div class="col-9">
+      <p class="negrita">{{ experiencia.empleador }}</p>
+      <p class="general-text-vp">{{ experiencia.puesto }}</p>
+      <p class="general-text-vp">{{ experiencia.obligaciones }}</p>
+    </div>
+  </div>
+
+
+
+  <!--Intereses-->
+  <div class="row">
+    <h3 class="titulos-secciones">Intereses</h3>
+    <hr />
+    <div class="col-4"></div>
+    <div class="col-8"></div>
+  </div>
+  <!--Habilidades-->
+  <div class="row">
+    <h3 class="titulos-secciones">Habilidades</h3>
+    <hr />
+    <div class="col-4"></div>
+    <div class="col-8"></div>
+  </div>
+</div>
+
+<button
+class="form-control bg-success"
+(click)="generatePDF()"
+style="color: aliceblue;">
+Descargar Curriculum en PDF
+</button>

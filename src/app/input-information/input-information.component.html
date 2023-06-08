@@ -1,0 +1,884 @@
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <!--Información Personal-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-info-personal"
+        aria-expanded="false"
+        aria-controls="flush-info-personal"
+      >
+        Datos Personales
+      </button>
+    </h2>
+    <div
+      id="flush-info-personal"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <!--Fila nombe-apellido-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Nombre</label>
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="inputValueName"
+              (input)="onInputChangueNameBeta()"
+            />
+          </div>
+        </div>
+        <!--Fila profession-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Profesión</label>
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="inputValueProfession"
+              (input)="onInputChangueProfession()"
+            />
+          </div>
+        </div>
+        <!--Fila description-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Comenta algo de ti</label>
+            <textarea
+              class="form-control"
+              id=""
+              rows="3"
+              [(ngModel)]="inputValueDescription"
+              (input)="onInputChangueDescription()"
+            >
+            </textarea>
+          </div>
+        </div>
+        <!--FILA CORREO-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Dirección de e-mail</label>
+          </div>
+          <div class="col-12">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="inputValueEmail"
+              (input)="onInputChangueEmail()"
+            />
+          </div>
+        </div>
+        <!--FILA TELEFONO-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Número de teléfono</label>
+          </div>
+          <div class="col-12">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="inputValuePhone"
+              (input)="onInputChanguePhone()"
+            />
+          </div>
+        </div>
+
+        <!--Fecha de nacimiento-->
+
+        <div class="row">
+          <div class="col-12">
+            <label for="">Fecha de nacimiento</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <select 
+            class="form-select" 
+            aria-label="Default select example"
+            [(ngModel)]="inputValueDay"
+            (ngModelChange)="onInputChangueDay()"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <select 
+            class="form-select" 
+            aria-label="Default select example"
+            [(ngModel)]="inputValueMonth"
+            (ngModelChange)="onInputChangueMonth()">
+            
+              <option value="1">Enero</option>
+              <option value="2">Febrero</option>
+              <option value="3">Marzo</option>
+              <option value="4">Abril</option>
+              <option value="5">Mayo</option>
+              <option value="6">Junio</option>
+              <option value="7">Julio</option>
+              <option value="8">Agosto</option>
+              <option value="9">Septiembre</option>
+              <option value="10">Octubre</option>
+              <option value="11">Noviembre</option>
+              <option value="12">Diciembre</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <select 
+            class="form-select" 
+            aria-label="Default select example"
+            [(ngModel)]="inputValueYear"
+            (ngModelChange)="onInputChangueYear()">
+            
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2002">2001</option>
+              <option value="2000">2000</option>
+            </select>
+          </div>
+        </div>
+
+        <!--Dirección-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">Dirección - Calle / Número</label>
+          </div>
+          <div class="col-12">
+            <input
+              class="form-control"
+              type="text"
+              [(ngModel)]="inputValueAddress"
+              (input)="onInputChangueAddress()"
+            />
+          </div>
+        </div>
+        <!--FILA PAIS-->
+        <div class="row">
+          <div class="col-12">
+            <label for="">País</label>
+          </div>
+          <div class="col-12">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Chile</option>
+              <option value="1">Argentina</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FORMACIÓN-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-info-formacion"
+        aria-expanded="false"
+        aria-controls="flush-info-formacion"
+      >
+        Formación
+      </button>
+    </h2>
+    <div
+      id="flush-info-formacion"
+      class="accordion-collapse collapse titulos-acordeon"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body  " style="height: 430px; overflow: scroll;">
+        <div class="row">
+          <button class="btn btn-success" (click)="agregarFormacion()">
+            Añadir Formación
+          </button>
+        </div>
+        <br />
+        <div class="row mt-4">
+          <div class="col-12">
+            <!--Accordion interno Formación-->
+            <div
+              class="container cont shadow"
+              *ngFor="let formacion of curriculum.formaciones"
+            >
+              <div class="d-flex bd-highlight mb-3 encabezado-cont">
+                <div class="me-auto p-2 bd-highlight">
+                  <h3>Formación Académica</h3>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <mat-icon
+                    ><span class="material-symbols-outlined delete-icon">
+                      delete
+                    </span>
+                    <a href=""><i></i></a>
+                  </mat-icon>
+                </div>
+              </div>
+              <div class="row">
+                <!--AÑO INICIO-->
+                <div class="col-6">
+                  <div class="col-12">Fecha de inicio</div>
+                  <div class="row">
+                    <div class="col-6">
+                      <select
+                        [(ngModel)]="formacion.mesInicio"
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Mes</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select
+                        [(ngModel)]="formacion.anoInicio"
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                      >
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2002">2001</option>
+                        <option value="2000">2000</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--Fin año inicio-->
+                <!--año finalización-->
+                <div class="col-6">
+                  <div class="col-12">Fecha de finalización</div>
+                  <div class="row">
+                    <div class="col-6">
+                      <select
+                        [(ngModel)]="formacion.mesFin"
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select
+                        [(ngModel)]="formacion.anoFin"
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                      >
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2002">2001</option>
+                        <option value="2000">2000</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mt-2 form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckIndeterminate"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="flexCheckIndeterminate"
+                    >
+                      Actualmente
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!--Universidad-->
+              <div class="row">
+                <div class="col">
+                  <label for="">Nombre de la escuela / Universidad</label>
+
+                  <input
+                    [(ngModel)]="formacion.entidadEducativa"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <!--Especialidad-->
+              <div class="row">
+                <div class="col">
+                  <label for="">Dirección / Especialidad</label>
+
+                  <input
+                    [(ngModel)]="formacion.carrera"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--TERMINO DEL div *nfor-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Experiencia laboral-->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-experiencia"
+        aria-expanded="false"
+        aria-controls="flush-experiencia"
+      >
+        Experiencia
+      </button>
+    </h2>
+    <div
+      id="flush-experiencia"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body" style="height: 520px; overflow: scroll;">
+        <div class="row">
+          <button class="btn btn-success" (click)="agregarExperiencia()">
+            <mat-icon>
+              <span class="material-symbols-outlined"> add_circle </span>
+            </mat-icon>
+            Añadir
+          </button>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <!--Accordion interno Formación-->
+            <div
+              class="container cont shadow"
+              *ngFor="let experiencia of curriculum.experiencias"
+            >
+              <div class="d-flex bd-highlight mb-3 encabezado-cont">
+                <div class="me-auto p-2 bd-highlight">
+                  <h3>Experiencias</h3>
+                </div>
+                <div class="p-2 bd-highlight">
+                  <mat-icon
+                    ><span class="material-symbols-outlined delete-icon">
+                      delete
+                    </span>
+                    <a href=""><i></i></a>
+                  </mat-icon>
+                </div>
+              </div>
+              <!--CONTENIDO DEL ACORDEON INTERNO-->
+              <div class="row">
+                <!--AÑO INICIO-->
+                <div class="col-6">
+                  <div class="col-12">Fecha de inicio</div>
+                  <div class="row">
+                    <div class="col-6">
+                      <select
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                        [(ngModel)]="experiencia.mesInicio"
+                      >
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                        [(ngModel)]="experiencia.anoInicio"
+                      >
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2002">2001</option>
+                        <option value="2000">2000</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--Fin año inicio-->
+                <!--año finalización-->
+                <div class="col-6">
+                  <div class="col-12">Fecha de finalización</div>
+                  <div class="row">
+                    <div class="col-6">
+                      <select
+                        class="form-select form-select-sm"
+                        aria-label="Default select example"
+                        [(ngModel)]="experiencia.mesFin"
+                      >
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select
+                        class="form-select form-select-sm"
+                        [(ngModel)]="experiencia.anoFin"
+                        aria-label="Default select example"
+                      >
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2002">2001</option>
+                        <option value="2000">2000</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mt-2 form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckIndeterminate"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="flexCheckIndeterminate"
+                    >
+                      Actualmente
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!--Universidad-->
+              <div class="row mt-2">
+                <div class="col">
+                  <label for="">Empleador</label>
+
+                  <input
+                    [(ngModel)]="experiencia.empleador"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <!--Especialidad-->
+              <div class="row mt-2">
+                <div class="col">
+                  <label for="">Puesto</label>
+
+                  <input
+                    [(ngModel)]="experiencia.puesto"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <!--Obligaciones-->
+              <div class="row mt-2">
+                <div class="col">
+                  <label for="">Obligaciones</label>
+                  <textarea
+                    [(ngModel)]="experiencia.obligaciones"
+                    class="form-control"
+                    placeholder=""
+                    id=""
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!--TERMINO DEL ACORDEON INTERNO-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--imagen perfil-->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-image"
+        aria-expanded="false"
+        aria-controls="flush-image"
+      >
+        Añadir fotografía
+      </button>
+    </h2>
+    <div
+      id="flush-image"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <div>
+
+          <button (click)="openModal()">Abrir Modal 2</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!--Intereses-->
+
+  <div class="accordion-item" >
+    <h2 class="accordion-header" >
+      <button 
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-intereses"
+        aria-expanded="false"
+        aria-controls="flush-intereses"
+      >
+        Intereses
+      </button>
+    </h2>
+    <div
+      id="flush-intereses"
+      class="accordion-collapse collapse "
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <div>
+          <label for="">Intereses</label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Virtudes-->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-virtudes"
+        aria-expanded="false"
+        aria-controls="flush-virtudes"
+      >
+        Virtudes
+      </button>
+    </h2>
+    <div
+      id="flush-virtudes"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <div>
+          <label for="">Virtudes</label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Habilidades-->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-habilidades"
+        aria-expanded="false"
+        aria-controls="flush-habilidades"
+      >
+        Habilidades
+      </button>
+    </h2>
+    <div
+      id="flush-habilidades"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <div>
+          <label for="">Habilidades</label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Idiomas-->
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        onclick="this.blur();"
+        class="accordion-button collapsed color-acordeon titulos-acordeon"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-idiomas"
+        aria-expanded="false"
+        aria-controls="flush-idiomas"
+      >
+        Idiomas
+      </button>
+    </h2>
+    <div
+      id="flush-idiomas"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample"
+    >
+      <div class="accordion-body">
+        <div>
+          <label for="">Idiomas</label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!--
+<button class="btn btn-primary" (click)="openModal(template)">Agregar Fotografía</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title">Recortar Imagen</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">-->
+    <!-- Aquí colocas el ngx-image-cropper para realizar el recorte de imagen -->
+   <!--
+    <image-cropper [imageChangedEvent]="imageChangedEvent" (imageCropped)="croppedImage = $event.base64"></image-cropper>
+ 
+ 
+    <h2>Agregar Fotografía</h2>
+    <input type="file" (change)="fileChangeEvent($event)" accept="image/*" />
+  
+    <div *ngIf="imageChangedEvent">
+      <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="1"
+        [resizeToWidth]="200"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+      ></image-cropper>
+    </div>
+ 
+  -->
+  <!--
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="cropImage()">Guardar</button>
+    <button type="button" class="btn btn-secondary" (click)="modalRef?.hide()">Cancelar</button>
+  </div>
+</ng-template>
+
+-->

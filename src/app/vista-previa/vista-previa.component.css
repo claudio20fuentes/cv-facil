@@ -1,0 +1,44 @@
+/*nombre persona principal*/
+.nombre-vp{
+    font-weight: bolder;
+    color: #1C2833;
+    font-size: 24px;
+}
+
+.profesion-vp{
+    font-size: 20px;
+    color: #17202A;
+    font-style: italic;
+}
+
+/*titulo profesional*/
+.titulo-vp{
+    font-size: 18px;
+
+}
+.anti-desbordamiento{
+    height: auto;
+    word-wrap: break-word;
+}
+
+.titulos-secciones{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-style: oblique;
+    color: #2E86C1;
+}
+
+.general-text-vp{
+    color: #17202A;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.negrita{
+    font-weight: bold;
+    font-style: italic;
+}
+.diagonal-gradient {
+    background: linear-gradient(to bottom right, blue, pink);
+  }
+

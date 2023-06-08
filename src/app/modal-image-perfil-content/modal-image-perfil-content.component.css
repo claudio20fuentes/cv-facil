@@ -1,0 +1,39 @@
+.img{
+    height: 100px;
+    width: 100px;
+}
+
+.file-label-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    font-family: 'Nunito', sans-serif;
+    color: midnightblue;
+}
+
+
+.file-input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .file-input-wrapper input[type="file"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+
+ 
+  .file-input-wrapper label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .file-input-wrapper img {
+    width: 100px; /* Establece el ancho deseado para la imagen */
+    height: 100px; /* Establece la altura deseada para la imagen */
+    border: none; /* Opcional: Elimina el borde de la imagen si lo deseas */
+  }

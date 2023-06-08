@@ -1,0 +1,56 @@
+/*acordeon principal*/
+.color-acordeon{
+    background-color: #060A0F ;
+}
+
+.titulos-acordeon{
+    font-weight: bolder;
+    color: aliceblue;
+    font-size: large;
+}
+
+ .accordion-button:is(.collapsed)::after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23AQUICOLOCAELCOLOR'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;    
+}
+ .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;    
+}
+
+.cont{
+    padding: 5%;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+    font-size: small;
+    color: #8E44AD;
+    margin-bottom:3em;
+}
+
+.encabezado-cont{
+    height: 3em;
+    margin-left: -7px;
+}
+
+.delete-icon{
+    color: #8E44AD;
+}
+
+.delete-icon:hover{
+    color:red;
+}
+
+
+.cont-center {
+    position: relative;
+  }
+  
+.cont-interno-center {
+    width: 100px;
+    height: 100px;
+    /* centrar vertical y horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px; /* aplicar a top y al margen izquierdo un valor negativo para completar el centrado del elemento hijo */
+  }

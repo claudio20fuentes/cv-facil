@@ -1,0 +1,58 @@
+/*HEADER*/
+.header{
+    background-color: #FDFEFE ;
+    height: 60px;
+    transition: background-color 0.3s;
+}
+
+.header:hover {
+    background-color: #060A0F; /* Color de fondo del header al pasar el mouse por encima */
+  }
+
+.header:hover .facil{
+    color: #FDFEFE;
+}
+
+.header:hover .cv{
+    color: #FDFEFE;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+
+.cv{
+    font-family: 'Anton', sans-serif;    
+    margin-right: 2px; /* Espacio entre "cv" y "facil" */
+    font-size: xx-large;
+    transition: background-color 0.3s;
+}
+
+.facil{
+    font-family: 'Dancing Script', cursive;
+    height: 30px;
+    width: 30px;
+    font-size: xx-large;
+    margin-top: 9px;
+}
+
+.btn-is{
+    background-color: #060A0F; /* Color de fondo del header al pasar el mouse por encima */
+    transition: background-color 0.3s;
+    color: #FDFEFE;
+}
+
+.header:hover .btn-is{
+    background-color: #FDFEFE ;
+    color:#060A0F;
+}
+
+.btn-rg{
+    background-color: #FFEC4F;
+}
+
+.header:hover .btn-rg{
+}
