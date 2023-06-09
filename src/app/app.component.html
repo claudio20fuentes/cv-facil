@@ -3,7 +3,10 @@
 <div class="container-fluid" style="background-color:#fdfefe">
   <!-- CONTENEDOR VISTA PREVIA Y FORMULARIO -->
   <div class="row p-4">
-    <div class="col-7 shadow-sm p-5" style="background-color: #FFFFFF">
+    <div class="  col-7 shadow-sm p-5" style="background-color: #fdfefe"      
+    (mouseenter)="startShake()"
+    (mouseleave)="isShaking = false"
+    [class.shake]="isShaking">
 
       <app-vista-previa
       [inputValueName]="copiedValueName"

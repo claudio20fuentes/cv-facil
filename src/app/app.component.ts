@@ -79,4 +79,13 @@ export class AppComponent {
   agregarExperiencia(experiencia: Experiencia){
     this.experiencias.push(experiencia);
   }
+
+  isShaking: boolean = false;
+
+  startShake() {
+    this.isShaking = true;
+    setTimeout(() => {
+      this.isShaking = false;
+    }, 1000);
+  }
 }
