@@ -96,11 +96,11 @@
         </div>
         <div class="row">
           <div class="col-4">
-            <select 
-            class="form-select" 
-            aria-label="Default select example"
-            [(ngModel)]="inputValueDay"
-            (ngModelChange)="onInputChangueDay()"
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              [(ngModel)]="inputValueDay"
+              (ngModelChange)="onInputChangueDay()"
             >
               <option value="1">1</option>
               <option value="2">2</option>
@@ -136,12 +136,12 @@
             </select>
           </div>
           <div class="col-4">
-            <select 
-            class="form-select" 
-            aria-label="Default select example"
-            [(ngModel)]="inputValueMonth"
-            (ngModelChange)="onInputChangueMonth()">
-            
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              [(ngModel)]="inputValueMonth"
+              (ngModelChange)="onInputChangueMonth()"
+            >
               <option value="1">Enero</option>
               <option value="2">Febrero</option>
               <option value="3">Marzo</option>
@@ -157,12 +157,12 @@
             </select>
           </div>
           <div class="col-4">
-            <select 
-            class="form-select" 
-            aria-label="Default select example"
-            [(ngModel)]="inputValueYear"
-            (ngModelChange)="onInputChangueYear()">
-            
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              [(ngModel)]="inputValueYear"
+              (ngModelChange)="onInputChangueYear()"
+            >
               <option value="2022">2022</option>
               <option value="2021">2021</option>
               <option value="2020">2020</option>
@@ -239,12 +239,21 @@
       class="accordion-collapse collapse titulos-acordeon"
       data-bs-parent="#accordionFlushExample"
     >
-      <div class="accordion-body  " style="height: 430px; overflow: scroll;">
-        <div class="row">
-          <button class="btn btn-success" (click)="agregarFormacion()">
-            Añadir Formación
-          </button>
+      <div class="accordion-body" style="height: 430px; overflow: scroll">
+        
+        <div class="row position-relative">
+          <div class="col">
+            <mat-icon
+              class="custom-icon position-absolute top-0 start-50 translate-middle"
+            >
+              <span class="material-symbols-outlined add" (click)="agregarFormacion()" > add </span>
+              
+            </mat-icon>
+          </div>
+          
+
         </div>
+
         <br />
         <div class="row mt-4">
           <div class="col-12">
@@ -449,17 +458,21 @@
     </h2>
     <div
       id="flush-experiencia"
-      class="accordion-collapse collapse"
+      class="accordion-collapse collapse titulos-acordeon"
       data-bs-parent="#accordionFlushExample"
     >
-      <div class="accordion-body" style="height: 520px; overflow: scroll;">
-        <div class="row">
-          <button class="btn btn-success" (click)="agregarExperiencia()">
-            <mat-icon>
-              <span class="material-symbols-outlined"> add_circle </span>
+      <div class="accordion-body" style="height: 520px; overflow: scroll">
+        <div class="row position-relative">
+          <div class="col">
+            <mat-icon
+              class="custom-icon position-absolute top-0 start-50 translate-middle"
+            >
+              <span class="add material-symbols-outlined " (click)="agregarExperiencia()" > add </span>
+              
             </mat-icon>
-            Añadir
-          </button>
+          </div>
+
+
         </div>
         <div class="row mt-4">
           <div class="col-12">
@@ -658,7 +671,6 @@
     </div>
   </div>
 
-
   <!--imagen perfil-->
 
   <div class="accordion-item">
@@ -682,20 +694,17 @@
     >
       <div class="accordion-body">
         <div>
-
           <button (click)="openModal()">Abrir Modal 2</button>
-
         </div>
       </div>
     </div>
   </div>
 
-  
   <!--Intereses-->
 
-  <div class="accordion-item" >
-    <h2 class="accordion-header" >
-      <button 
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
         onclick="this.blur();"
         class="accordion-button collapsed color-acordeon titulos-acordeon"
         type="button"
@@ -709,7 +718,7 @@
     </h2>
     <div
       id="flush-intereses"
-      class="accordion-collapse collapse "
+      class="accordion-collapse collapse"
       data-bs-parent="#accordionFlushExample"
     >
       <div class="accordion-body">
@@ -810,37 +819,7 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
 
 <!--
 <button class="btn btn-primary" (click)="openModal(template)">Agregar Fotografía</button>
@@ -853,8 +832,8 @@
     </button>
   </div>
   <div class="modal-body">-->
-    <!-- Aquí colocas el ngx-image-cropper para realizar el recorte de imagen -->
-   <!--
+<!-- Aquí colocas el ngx-image-cropper para realizar el recorte de imagen -->
+<!--
     <image-cropper [imageChangedEvent]="imageChangedEvent" (imageCropped)="croppedImage = $event.base64"></image-cropper>
  
  
@@ -873,7 +852,7 @@
     </div>
  
   -->
-  <!--
+<!--
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-primary" (click)="cropImage()">Guardar</button>

@@ -1,12 +1,31 @@
+.custom-icon {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+.add{
+    color: #060A0F ;
+}  
+
+.add:hover{
+    color: #566573;
+}
+
+
 /*acordeon principal*/
 .color-acordeon{
     background-color: #060A0F ;
 }
 
 .titulos-acordeon{
-    font-weight: bolder;
-    color: aliceblue;
+    font-weight: 500;
+    color: #ffffff;
     font-size: large;
+}
+
+.titulos-acordeon:hover{
+    color:#566573;
 }
 
  .accordion-button:is(.collapsed)::after {
@@ -23,7 +42,7 @@
     border-bottom-left-radius: 15px 15px;
     border-bottom-right-radius: 15px 15px;
     font-size: small;
-    color: #8E44AD;
+    color: #060A0F;
     margin-bottom:3em;
 }
 
@@ -33,7 +52,7 @@
 }
 
 .delete-icon{
-    color: #8E44AD;
+    color: #060A0F;
 }
 
 .delete-icon:hover{
